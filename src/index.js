@@ -1,7 +1,31 @@
 import {renderPage} from './render';
-import {menuPage} from './menu';
+import {renderMenuPage} from './menu';
+import {displayAbout} from './about';
 
 renderPage();
 
-const menuBtn = document.getElementById('#menu');
-menuBtn.addEventListener('click', menuPage);
+const navSwitch = () => {
+    const nav = document.getElementById('right-nav');
+    const navBtns = nav.getElementsByTagName('a');
+    for(let i = 0; i < navBtns.length; i++) {
+        navBtns[i].addEventListener('click', () => {
+            moveTab(i);
+        });
+    }
+}
+
+
+const moveTab = (i) => {
+    switch(i) {
+        case 1:
+            console.log("Menu Page");
+            renderMenuPage();
+            break;
+        case 2:
+            console.log("About Page");
+            displayAbout();
+            break;
+    }
+}
+
+navSwitch();

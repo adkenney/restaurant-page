@@ -1,6 +1,6 @@
 const renderPage = () => {
     addNav();
-    mainImg();
+    mainContent();
 }
 
 const addNav = () => {
@@ -18,7 +18,7 @@ const leftNav = () => {
     const leftNavDiv = document.createElement('div');
     const restaurantName = document.createElement('a');
     restaurantName.innerHTML = 'Kell\'s Burger Bar';
-    leftNavDiv.className = 'left-nav';
+    leftNavDiv.setAttribute('id','left-nav');
     leftNavDiv.appendChild(restaurantName);
 
     return leftNavDiv;
@@ -34,10 +34,10 @@ const rightNav = () => {
     menu.innerHTML = 'Menu';
     about.innerHTML = 'About';
 
-    home.setAttribute('id', '#home');
-    menu.setAttribute('id', '#menu');
-    about.setAttribute('id', '#about');
-    rightNavDiv.className = 'right-nav';
+    home.setAttribute('id', 'home');
+    menu.setAttribute('id', 'menu');
+    about.setAttribute('id', 'about');
+    rightNavDiv.setAttribute('id', 'right-nav');
 
     rightNavDiv.appendChild(home);
     rightNavDiv.appendChild(menu);
@@ -46,17 +46,16 @@ const rightNav = () => {
     return rightNavDiv;
 }
 
-const mainImg = () => {
-    const imgDiv = document.createElement('div');
-    const restaurantImg = document.createElement('img');
-    restaurantImg.src = 'images/table-in-vintage-restaurant.jpg';
-    imgDiv.className = 'home-img-div';
-    imgDiv.appendChild(restaurantImg);
-    content.appendChild(imgDiv);
+const mainContent = () => {
+    const container = document.getElementById('content');
+    const restaurantContent = document.createElement('div');
+    restaurantContent.setAttribute('id', 'main-content');
+    container.appendChild(restaurantContent);
 }
 
 const clearPage = () => {
-    content.innerHTML = '';
-}
+    const mainContent = document.getElementById('main-content');
+    mainContent.innerHTML = '';
+} 
 
 export {renderPage, clearPage};
