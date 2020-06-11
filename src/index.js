@@ -1,6 +1,7 @@
-import {renderPage} from './render';
+import {renderPage, clearPage} from './render';
 import {renderMenuPage} from './menu';
 import {displayAbout} from './about';
+import {displayContact} from './contact';
 
 renderPage();
 
@@ -17,13 +18,14 @@ const navSwitch = () => {
 
 const moveTab = (i) => {
     switch(i) {
+        case 0:
+            clearPage();
+            break;
         case 1:
-            console.log("Menu Page");
             renderMenuPage();
             break;
         case 2:
-            console.log("About Page");
-            displayAbout();
+            displayContact();
             break;
     }
 }

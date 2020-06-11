@@ -28,20 +28,20 @@ const rightNav = () => {
     const rightNavDiv = document.createElement('div');
     const home = document.createElement('a');
     const menu = document.createElement('a');
-    const about = document.createElement('a');
+    const contact = document.createElement('a');
 
     home.innerHTML = 'Home';
     menu.innerHTML = 'Menu';
-    about.innerHTML = 'About';
+    contact.innerHTML = 'Contact';
 
     home.setAttribute('id', 'home');
     menu.setAttribute('id', 'menu');
-    about.setAttribute('id', 'about');
+    contact.setAttribute('id', 'contact');
     rightNavDiv.setAttribute('id', 'right-nav');
 
     rightNavDiv.appendChild(home);
     rightNavDiv.appendChild(menu);
-    rightNavDiv.appendChild(about);
+    rightNavDiv.appendChild(contact);
 
     return rightNavDiv;
 }

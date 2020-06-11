@@ -30,6 +30,7 @@ const menuItem = (itemName, itemDescription, itemPrice) => {
         const itemDescriptionDiv = document.createElement('div');
         const itemPriceDiv = document.createElement('div');
 
+        itemDiv.className = 'menu-grid';
         itemNameDiv.className = 'menu-item';
         itemDescriptionDiv.className = 'menu-description';
         itemPriceDiv.className = 'menu-price';
@@ -50,8 +51,8 @@ const menuItem = (itemName, itemDescription, itemPrice) => {
 const addMenuItems = () => {
     menuList.push(menuItem('Cheeseburger','Good old fashion patty with cheese', 9));
     menuList.push(menuItem('Bacon Cheeseburger','Patty topped with smoked bacon, American cheese, ketchup and mustard', 10));
-    menuList.push(menuItem('Cheese Steak Burger','Cheese steak on top of an angus beef patty', 15));
-    menuList.push(menuItem('Cheeseburger','Good old fashion patty with cheese', 9));
+    menuList.push(menuItem('Cheese Steak Burger','Cheese steak with onions, peppers, and provolone cheese, on top of an angus beef patty', 15));
+    menuList.push(menuItem('Founder\'s Favorite','100% angus burger topped with jalapenos, onion rings, American cheese, and specialty sauce', 15));
     menuList.push(menuItem('Turkey Burger','Turkey patty with standard ketchup and mustard toppings', 10));
     menuList.push(menuItem('Veggie Burger','Soybean burger topped with spinach and tomatoes', 10));
 }
